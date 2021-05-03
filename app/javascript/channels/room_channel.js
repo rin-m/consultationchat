@@ -10,10 +10,10 @@ consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
+    alert(data['message']);
   },
 
-  speak: function() {
-    return this.perform('speak');
+  speak: function(message) {
+    return this.perform('speak', {message: message});
   }
 });
