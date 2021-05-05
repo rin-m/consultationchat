@@ -1,10 +1,27 @@
-<h1>Chat room</h1>
 
-<div id="messages">
-  <%= render @messages %>
-</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1>Chatroom</h1>
+    </div>
+  </div>
+</nav>
 
 <form>
-  <label>Say something:</label><br>
-  <input type="text" data-behavior="room_speaker">
+  <div class="container" style="height: 100px;">
+    <div class="form-group">
+      <label>Say something</label><br>
+      <input type="text" class="form-control" data-behavior="room_speaker" placeholder="Text">
+    </div>
+  </div>
 </form>
+
+<div class="clearfix">
+  <div class="container" style="height: 100px;">
+    <div class="balloon float-left">
+      <div id="messages">
+        <%= render @messages %>
+      </div>
+    </div>
+  </div>
+</div>
